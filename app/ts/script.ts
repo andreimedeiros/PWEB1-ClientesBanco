@@ -18,19 +18,19 @@ const contaBonificada = new ContaBonificada('10', 100);
 contaBonificada.creditar(10);
 console.log(contaBonificada.getSaldo());
 
-let pessoa = new Pessoa("Maria", 24, new Date(1998, 5, 6));
+let pessoa = new Pessoa("Maria", 24, new Date(1998, 5, 6), null);
 console.log(pessoa.nome);
 console.log(pessoa.idade);
 console.log(pessoa.dataNascimento);
 
-const pessoaf = new PessoaFisica("José", 22, new Date(2000, 3, 9), "12345679800");
+const pessoaf = new PessoaFisica("José", 22, new Date(2000, 3, 9), "12345679800", null);
 console.log(pessoaf.nome);
 console.log(pessoaf.idade);
 console.log(pessoaf.dataNascimento);
 console.log(pessoaf.cpf);
 
 
-const pessoaj = new PessoaJuridica("Maria Atacado", 20, new Date(2002, 1, 1), "12345678000001");
+const pessoaj = new PessoaJuridica("Maria Atacado", 20, new Date(2002, 1, 1), "12345678000001", null);
 console.log(pessoaj.nome);
 console.log(pessoaj.idade);
 console.log(pessoaj.dataNascimento);
@@ -71,15 +71,16 @@ console.log(repositoriop)
 
 console.log(cliente1.pesquisaConta("1"))
 
-
-
+let numero = 0
+let totalcontas = cliente1.contas.length
 while (cliente1.contas.length > 0) {
-    let numero = 0
-    console.log(cliente1.saltoTotalContas());
-    console.log(cliente1.mediaSaldoContas());
-    numero++
+    console.log("O Salto total das contas é: " + cliente1.saltoTotalContas());
+    console.log("A Média total das contas é: " + cliente1.mediaSaldoContas());
+    numero++;
+    numero.toString();
+    console.log(`Removendo conta ${numero}, aguarde...`)
     cliente1.removerConta(String(numero));
-}
+ }
 
 
 

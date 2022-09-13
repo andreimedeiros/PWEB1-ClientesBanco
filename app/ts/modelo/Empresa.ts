@@ -3,7 +3,7 @@ class Empresa extends PessoaJuridica {
     protected _contas: (Conta | ContaBonificada)[] = [] 
 
     constructor(nome: string, idade: number, dataNascimento: Date, cnpj: string, contas: Array<Conta | ContaBonificada>){
-        super(nome, idade, dataNascimento, cnpj)
+        super(nome, idade, dataNascimento, cnpj, contas)
     }
 
 

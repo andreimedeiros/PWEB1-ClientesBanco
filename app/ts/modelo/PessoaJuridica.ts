@@ -1,7 +1,7 @@
 class PessoaJuridica extends Pessoa {
 
-    constructor(nome: string, idade: number, dataNascimento: Date, private _cnpj: string){
-        super(nome + " Juridica", idade, dataNascimento)
+    constructor(nome: string, idade: number, dataNascimento: Date, private _cnpj: string, contas: Array<Conta | ContaBonificada>){
+        super(nome + " Juridica", idade, dataNascimento, contas)
     }
 
 

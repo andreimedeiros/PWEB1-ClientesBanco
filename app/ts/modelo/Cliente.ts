@@ -3,7 +3,7 @@ class Cliente extends PessoaFisica {
     protected _contas: Array<Conta | ContaBonificada> = [];
 
     constructor(nome: string, idade: number, dataNascimento: Date, cpf: string, contas: Array<Conta | ContaBonificada>){
-        super(nome, idade, dataNascimento, cpf)
+        super(nome, idade, dataNascimento, cpf, contas)
     }
 
 

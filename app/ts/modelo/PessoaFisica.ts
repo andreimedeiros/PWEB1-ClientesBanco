@@ -1,7 +1,7 @@
 class PessoaFisica extends Pessoa {
 
-    constructor(nome: string, idade: number, dataNascimento: Date, private _cpf: string){
-        super(nome + "Fisica", idade, dataNascimento)
+    constructor(nome: string, idade: number, dataNascimento: Date, private _cpf: string, contas: Array<Conta | ContaBonificada>){
+        super(nome + "Fisica", idade, dataNascimento, contas)
     }
 
 
